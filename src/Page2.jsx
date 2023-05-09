@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 
@@ -12,9 +13,17 @@ const Page2 = () => {
             console.log("Last name: " + Last);
             console.log("Email: " + Email);
             console.log("Message: " + Message);
+            postData()
         } else {
             console.log("empty");
         }
+    }
+    const postData = () => {
+        axios.post("http://localhost:3100/data", {
+            name: First + " " + Last,
+            email: Email,
+            message: Message
+        })
     }
     return (
         <>
@@ -34,7 +43,7 @@ const Page2 = () => {
                                     <textarea onChange={(e) => setMessage(e.target.value.trim())} className='inp mb-3' rows={5} placeholder='Message'></textarea>
                                     <div className="d-flex justify-content-start">
                                         <input onClick={() => submit()} className='input-btn me-2 mt-0' type="button" value="Submit" />
-                                        <input onClick={() => window.location.reload()} className='input-btn ms-2 mt-0' type="button" value="Reset"/>
+                                        <input onClick={() => window.location.reload()} className='input-btn ms-2 mt-0' type="button" value="Reset" />
                                     </div>
                                 </form>
                             </div>

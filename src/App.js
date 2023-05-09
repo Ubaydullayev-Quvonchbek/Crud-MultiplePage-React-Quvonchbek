@@ -1,9 +1,7 @@
-import React from "react";
 import Page1 from "./Page1";
 import Page2 from "./Page2";
 import { Link, Route, Routes } from "react-router-dom";
 import { Col, Container, Row } from "react-bootstrap";
-// import axios from "axios";
 
 function App() {
   return (
@@ -16,8 +14,8 @@ function App() {
                 <Link to='/'>
                   <li className='list-item'>Home</li>
                 </Link>
-                <Link to='/login'>
-                  <li className='list-item'>Login</li>
+                <Link to='/contact'>
+                  <li className='list-item'>Contact Us</li>
                 </Link>
               </ul>
             </div>
@@ -26,7 +24,7 @@ function App() {
       </Container>
       <Routes>
         <Route path='/' element={< Page1 />} />
-        <Route path='/login' element={< Page2 />} />
+        <Route path='/contact' element={< Page2 />} />
       </Routes>
     </>
   );

@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Quvonchbek Ubaydullayev",
+      "email": "quvonchbeku048@gmail.com",
+      "message": "Qoyil gap yo"
+    },
+    {
+      "name": "Azizbek Islomboyev",
+      "email": "prouzbmaster@gmail.com",
+      "message": "mazza qildim rahmat 🤣😎",
+      "id": 2
+    },
+    {
+      "name": "Ali Banad",
+      "email": "banadali@gmail.com",
+      "message": "good luck bro",
+      "id": 3
+    }
+  ]
+}
